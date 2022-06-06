@@ -7,12 +7,16 @@ public class Main {
 //        System.out.println(b.getVolume()); // -> 48);
 //        System.out.println(b.getSurfaceArea()); // -> 88 );
 
+        LeapYear year = new LeapYear(2032);
+        LeapYear year2 = new LeapYear(1960);
+        LeapYear year3 = new LeapYear(1993);
+        LeapYear year4 = new LeapYear(2000);
+        System.out.println("From instance. 2032 is leap year - " + LeapYear.isLeapYear(year.getYear()));
+        System.out.println("From instance. 1960 is leap year - " + LeapYear.isLeapYear(year2.getYear()));
+        System.out.println("From instance. 1993 is NOT leap year - " + LeapYear.isLeapYear(year3.getYear()));
+        System.out.println("From instance. 2000 is leap year - " + LeapYear.isLeapYear(year4.getYear()));
 
 
-        System.out.println("2032 is leap year - " + LeapYear.isLeapYear(2032) );
-        System.out.println("1960 is leap year - " + LeapYear.isLeapYear(1960) );
-        System.out.println("1993 is NOT leap year - " + LeapYear.isLeapYear(1993) );
-        System.out.println("2000 is leap year - " + LeapYear.isLeapYear(2000) );
 
 
 

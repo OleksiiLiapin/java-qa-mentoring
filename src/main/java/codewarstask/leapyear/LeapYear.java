@@ -1,3 +1,5 @@
+package codewarstask.leapyear;
+
 public class LeapYear {
     private int year;
     public LeapYear (int year){

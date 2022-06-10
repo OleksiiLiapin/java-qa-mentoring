@@ -1,4 +1,4 @@
-//Link to task https://www.codewars.com/kata/55b75fcf67e558d3750000a3
+package codewarstask.block;//Link to task https://www.codewars.com/kata/55b75fcf67e558d3750000a3
 
 public class Block {
     private int width;

@@ -1,17 +1,13 @@
 import codewarstask.areacalculator.*;
 import codewarstask.arithmeticfunction.ArithmeticFunction;
-import codewarstask.reversedarray.ReversedArray;
 import codewarstask.theoffice2boredomscore.Person;
 import codewarstask.theoffice2boredomscore.TheOffice;
 
 import java.lang.reflect.Array;
-import java.util.Arrays;
-
+import java.util.*;
 
 
 public class Main {
-
-
 
     public static void main(String[] args) {
          double side = 4;
@@ -30,10 +26,20 @@ public class Main {
         double rounded = cal.doubleRound(rec.getArea() + rec2.getArea());
         System.out.println("Rounded rec " + rounded);
 
-
         Calculator cal2 = new Calculator();
         System.out.println("nope shape = " + cal2.getTotalArea());
 
+        List <Shape> shapes = new ArrayList<>();{{
+            shapes.add(new Circle(3.4));
+            shapes.add(new Triangle(2.1,1.2));
+            shapes.add(new Rectangle(2.1,5.4));
+
+        }}
+
+
+
+
+        }
     }
 
-}
+

@@ -1,12 +1,14 @@
+package codewarstask.salesmantravel;
 
-import codewarstask.salesmantravel.Travel;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
-import java.lang.reflect.Array;
-import java.util.*;
+public class TravelTest {
 
 
-public class Main {
-    public static void main(String[] args) {
+
+    @Test
+    public void basicTest(){
         String r = "123 Main Street St. Louisville OH 43071,432 Main Long Road St. Louisville OH 43071,786 High Street Pollocksville NY 56432,"
                 + "54 Holy Grail Street Niagara Town ZP 32908,3200 Main Rd. Bern AE 56210,1 Gordon St. Atlanta RE 13000,"
                 + "10 Pussy Cat Rd. Chicago EX 34342,10 Gordon St. Atlanta RE 13000,58 Gordon Road Atlanta RE 13000,"
@@ -19,39 +21,16 @@ public class Main {
                 + "2200 Tokyo Av. Tedmondville SW 43198,67 Paris St. Abbeville AA 45522,11 Surta Avenue Goodville GG 30655,"
                 + "2222 Tokyo Av. Tedmondville SW 43198,670 Paris St. Abbeville AA 45522,114 Surta Avenue Goodville GG 30655,"
                 + "2 Holy Grail Street Niagara Town ZP 32908,3 Main Rd. Bern AE 56210,77 Gordon St. Atlanta RE 13000";
-//        String [] address = r.split(",");
-//        String zip = "OH 43071";
-//        StringBuffer buffer = new StringBuffer();
-//        buffer.append(zip+":");
-//        for (String ad: address) {
-//            if(ad.contains("OH 43071")){
-//                // System.out.println(ad);
-//                ad.replaceAll(zip, "");
-//                buffer.append(ad + ", ");
-//            }
-//        }
-//        System.out.println(buffer);
-//        StringBuffer buffer1 = new StringBuffer("/");
-//        StringBuffer buffer2 = new StringBuffer("/");
-//        String name = "123 Main Street St. Louisville OH 43071,432 Main Long Road St. Louisville OH 43071,786 High Street Pollocksville NY 56432";
-//        String withoutZip = name.replaceAll(zip, "");
-//        String newName = withoutZip.replaceAll("[a-z, A-Z,.,!]", "");
-//        buffer1.append(newName);
-//        System.out.println(name);
-//        System.out.println(withoutZip);
-//       System.out.println(buffer1.toString());
-
-        Travel.travel(r,"OH 43071");
-        System.out.println(Travel.travel(r,""));
-        //YY 45098
 
 
-
+        Assertions.assertEquals(Travel.travel(r,"OH 430"),"OH 430:/", "Zip code doesn't exist");
+        Assertions.assertEquals(Travel.travel(r,""),":/", "empty string zip code");
+        Assertions.assertEquals(Travel.travel(r,"OH 43071"),"OH 43071:Main Street St. Louisville,Main Long Road St. Louisville/123,432",
+                "Existing zip code");
 
 
 
     }
 
+
 }
-
-

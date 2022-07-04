@@ -1,4 +1,6 @@
 
+import codewarstask.calculatestringrotation.CalculateRotation;
+import codewarstask.decodemorsecode.MorseCodeDecoder;
 import codewarstask.expendedform.ExpendedNumber;
 import codewarstask.initials.Initials;
 import codewarstask.persistdebugger.Persist;
@@ -11,7 +13,6 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-
 
     }
 }
